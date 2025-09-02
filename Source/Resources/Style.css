@@ -533,20 +533,3 @@ table {
   max-width: 100%;
   overflow-x: auto;
 }
-
-/* (optionnel) Rétrécir un peu la base */
-body,
-p,
-li {
-  font-size: 0.95em;
-  line-height: 1.45;
-}
-h1 {
-  font-size: 1.6em;
-}
-h2 {
-  font-size: 1.4em;
-}
-h3 {
-  font-size: 1.2em;
-}
