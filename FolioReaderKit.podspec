@@ -7,16 +7,19 @@ Pod::Spec.new do |s|
                    The Best Open Source ePub Reader.
                    DESC
   s.homepage         = "https://github.com/FolioReader/FolioReaderKit"
-  s.screenshots     = "https://raw.githubusercontent.com/FolioReader/FolioReaderKit/assets/custom-fonts.gif", "https://raw.githubusercontent.com/FolioReader/FolioReaderKit/assets/highlight.gif"
+  s.screenshots      = "https://raw.githubusercontent.com/FolioReader/FolioReaderKit/assets/custom-fonts.gif", "https://raw.githubusercontent.com/FolioReader/FolioReaderKit/assets/highlight.gif"
   s.license          = 'BSD'
   s.author           = { "Heberti Almeida" => "hebertialmeida@gmail.com" }
-  s.source           = { :git => "https://github.com/FolioReader/FolioReaderKit.git", :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/hebertialmeida'
 
-  s.swift_version = '4.2'
-  s.platform      = :ios, '9.0'
-  s.requires_arc  = true
+  # 👉 IMPORTANT : on pointe sur TON fork et TA branche
+  s.source           = { :git => "https://github.com/thibault-mir/FolioReaderKit.git", :branch => "realm-3-20" }
 
+  # 👉 Swift & iOS modernes
+  s.swift_version    = '5.0'
+  s.platform         = :ios, '13.0'
+  s.requires_arc     = true
+
+  # Chemins source (conservent la structure d’origine)
   s.source_files = [
     'Source/*.{h,swift}',
     'Source/**/*.swift',
@@ -30,11 +33,14 @@ Pod::Spec.new do |s|
   s.public_header_files = 'Source/*.h'
 
   s.libraries  = "z"
+
+  # Dépendances (versions compatibles avec Swift 5 / iOS récents)
   s.dependency 'SSZipArchive', '2.1.1'
   s.dependency 'MenuItemKit', '3.1.3'
   s.dependency 'ZFDragableModalTransition', '0.6'
   s.dependency 'AEXML', '4.3.3'
   s.dependency 'FontBlaster', '4.1.0'
-  s.dependency 'RealmSwift', '3.17.3'
 
+  # 👉 Realm 3.20.x pour corriger le crash "Primary key property 'name'..."
+  s.dependency 'RealmSwift', '~> 3.20'
 end
