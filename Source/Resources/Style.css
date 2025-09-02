@@ -107,7 +107,7 @@ section {
 
 /* ePUB */
 html {
-  -webkit-text-size-adjust: none; /* Never autoresize text */
+  /* -webkit-text-size-adjust: none; /* Never autoresize text */
   padding: 0 0 !important;
   overflow: hidden;
 }
