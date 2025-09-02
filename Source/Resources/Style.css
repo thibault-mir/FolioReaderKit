@@ -516,7 +516,7 @@ div {
 
 /* Fit-to-screen / responsive fix */
 html {
-  -webkit-text-size-adjust: 95%;
+  -webkit-text-size-adjust: 75%;
 } /* baisse si c’est encore trop gros: 90%, 85%... */
 body {
   margin: 24px;
